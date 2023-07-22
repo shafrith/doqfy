@@ -1,0 +1,47 @@
+<!-- <app-header></app-header> -->
+<div class="container-fluid p-4 common">
+  <div class="card side-card">
+    <div class="card-body">
+      <p>
+        Welcome back, <b>Michael</b><br /><span class="small-font grey-font"
+          >25 May, 2023 - Tuesday</span
+        >
+      </p>
+    </div>
+  </div>
+  <div class="pt-2">
+    <div class="card side-card">
+      <div class="card-body">
+        <p>
+          <b>My Wallet</b
+          ><i
+            class="fa fa-credit-card-alt p-2 display-right icon-colour"
+            aria-hidden="true"
+          ></i>
+        </p>
+        <p class="currency">
+          ₹2,50,000<br /><span class="grey-font small-font"
+            >Current Balance</span
+          >
+        </p>
+        <p class="small-font">
+          Running low? <a href="#" class="link-text">Notify admin</a> now
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pt-2">
+    <div class="card card-content side-card pending-card">
+      <div class="card-body">
+        <p><b>Pending Action</b></p>
+        <div *ngFor="let item of pendingData" class="pending-status p-2 m-1">
+          <div>{{ item.heading }}</div>
+          <span class="grey-font pending-small-font">{{ item.content }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <app-mainpage></app-mainpage> -->
+<!-- <img src="assets/doq.jpg"> -->

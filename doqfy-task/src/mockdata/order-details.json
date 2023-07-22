@@ -1,0 +1,22 @@
+[
+    {
+        "numberOfOrders": 18,
+        "orderStatus": "Total Orders",
+        "growthPercent": "2.4"
+    },
+    {
+        "numberOfOrders": 10,
+        "orderStatus": "In Progress",
+        "growthPercent": "2.4"
+    },
+    {
+        "numberOfOrders": 5,
+        "orderStatus": "Completed Order",
+        "growthPercent": "2.4"
+    },
+    {
+        "numberOfOrders": 3,
+        "orderStatus": "Cancelled Order",
+        "growthPercent": "2.4"
+    }
+]

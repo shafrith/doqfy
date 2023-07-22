@@ -1,0 +1,67 @@
+.card-content::-webkit-scrollbar {
+  width: 3px; /* Width of the scrollbar */
+  margin: 40px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+  background-color: #c9c3c3; /* Color of the thumb (scrollbar handle) */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.card-content::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Color of the track (the area behind the thumb) */
+}
+
+.common {
+  float: left;
+  max-width: 25%;
+  min-width: 240px;
+  background-color: rgb(245, 245, 250);
+  font-family: Helvetica;
+  font-size: small;
+}
+
+.side-card {
+  max-width: 25%;
+  min-width: 240px;
+}
+
+.small-font {
+  font-size: x-small;
+}
+
+.pending-small-font {
+  font-size: xx-small;
+}
+
+.currency {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.grey-font {
+  color: grey;
+}
+
+.display-right {
+  float: right;
+}
+
+.icon-colour {
+  color: #612e86;
+}
+
+.link-text {
+  color: #82599f;
+}
+
+.pending-card {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.pending-status {
+  border: solid 0.2px;
+  border-radius: 5px;
+  border-color: rgb(232, 228, 228);
+}

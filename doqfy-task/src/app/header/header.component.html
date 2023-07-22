@@ -1,0 +1,23 @@
+<div class="my-2 mx-5 common-font">
+  <img src="assets/doq.jpg" class="img-size" />
+  <select class="border-0 mar-left">
+    <option value="services">Services</option>
+  </select>
+  <ng-container *ngFor="let item of headerList">
+    <label
+      class="mar-left"
+      [ngStyle]="{ color: item === 'Invoice' ? 'grey' : '' }"
+      >{{ item }}</label
+    >
+  </ng-container>
+  <ng-container>
+    <button type="button" class="badge">Coming Soon</button>
+    <div class="display-right">
+      <i class="fa fa-bell-o notify" aria-hidden="true"></i>
+      <button type="button" class="btn btn-outline-secondary">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>Michael Smith
+        <span class="profile-image">M</span>
+      </button>
+    </div>
+  </ng-container>
+</div>

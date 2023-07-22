@@ -1,0 +1,109 @@
+<div class="container-fluid float-right p-4 main-page common">
+  <div class="card main-card">
+    <div class="card-body">
+      <p><b>Frequently Used</b></p>
+      <div class="row">
+        <div
+          *ngFor="let item of frequentUsed"
+          class="m-2 col-md-4 p-3"
+          style="
+            max-width: 30%;
+            border: solid 1px;
+            border-color: #410167;
+            border-radius: 5px;
+          "
+        >
+          <b>{{ item.heading }}</b>
+          <p class="grey-font small-font">{{ item.content }}</p>
+          <a href="#" class="small-font link-text"><b>Get Started >></b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 mt-3">
+      <select class="p-1 branch-dropdown small-font grey-font">
+        <option value="#">All Branches</option>
+      </select>
+    </div>
+    <div class="col-md-2 mt-3 display-right">
+      <select class="p-1 branch-dropdown small-font">
+        <option value="#">Custom range</option>
+      </select>
+    </div>
+    <div class="col-md-2 mt-3 display-right">
+      <button class="branch-dropdown small-font p-1 bg-white" type="button">
+        March 2020 &nbsp;<i class="fa fa-calendar-o" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="card mt-3 main-card">
+    <div class="card-body">
+      <p>
+        <b>Order Details</b>
+        <span class="small-font display-right"
+          ><a class="link-text" href="#"><b>View All</b></a></span
+        >
+      </p>
+      <div class="d-flex justify-content-around align-item-center">
+        <div *ngFor="let item of orderDetails" class="p-3 order-details-card">
+          <b class="order-font">{{ item.numberOfOrders }}</b>
+          <span *ngIf="item.orderStatus === 'Total Orders'"
+            ><i class="fa fa-list fa-2x icon-order"></i
+          ></span>
+          <span *ngIf="item.orderStatus === 'In Progress'"
+            ><i class="fa fa-clock-o fa-2x icon-order"></i
+          ></span>
+          <span *ngIf="item.orderStatus === 'Completed Order'"
+            ><i class="fa fa-check-circle fa-2x icon-order"></i
+          ></span>
+          <span *ngIf="item.orderStatus === 'Cancelled Order'"
+            ><i class="fa fa-ban fa-2x icon-order"></i
+          ></span>
+
+          <div class="order-status">{{ item.orderStatus }}</div>
+          <span
+            *ngIf="item.orderStatus !== 'Cancelled Order'"
+            class="order-not-cancel"
+            ><i class="fa fa-arrow-up"></i
+          ></span>
+          <span
+            *ngIf="item.orderStatus === 'Cancelled Order'"
+            class="order-cancel"
+            ><i class="fa fa-arrow-down"></i
+          ></span>
+          &nbsp;<span class="growth-percent">{{ item.growthPercent }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" class="left-0">
+    <div class="d-flex justify-content-between align-content-left my-2 left-0">
+      <div class="card my-2 e-card">
+        <p class="p-2 m-2">
+          <b><u>E-Sign Count</u></b>
+        </p>
+        <p-chart
+          type="doughnut"
+          [data]="data"
+          [options]="options"
+          [style]="{ width: '45%' }"
+        ></p-chart>
+      </div>
+      <div class="card my-2 e-card">
+        <p class="p-2">
+          <b><u>E-Stamp Count</u></b>
+        </p>
+        <p-chart
+          type="doughnut"
+          [data]="data"
+          [options]="options"
+          [style]="{ width: '45%' }"
+        ></p-chart>
+      </div>
+    </div>
+  </div>
+</div>
